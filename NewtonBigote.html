@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newton, el Perro</title>
+    <link rel="stylesheet" href="NewtonBigoteCss.css">
+</head>
+<body>
+    <h1 class="title">Newton, el Perro</h1>
+    <div class="container">
+        <div style="position:relative; display:inline-block;">
+            <img src="cono de la verguenza.jpeg" alt="Newton el perro" class="newton-image" id="newton-image">
+            <img src="mustache.webp" alt="Bigote" class="mustache" id="mustache">
+        </div>
+        <button class="theme-button" id="theme-button">Modo Rubio</button>
+    </div>
+
+    <script>
+        let mustacheWidth = 50;
+
+        document.getElementById('newton-image').addEventListener('click', function() {
+            mustacheWidth += 10;
+            document.getElementById('mustache').style.width = mustacheWidth + 'px';
+        });
+
+        document.getElementById('theme-button').addEventListener('click', function() {
+            document.body.classList.toggle('dark-mode');
+            document.getElementById('mustache').classList.toggle('blonde-mode');
+        });
+    </script>
+</body>
+</html>
